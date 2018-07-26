@@ -1,5 +1,8 @@
 import os
 import checker
+import time
+import move
+
 
 jobsList = os.listdir("example/binary")
 
@@ -13,7 +16,7 @@ actionArray = []
 for actions in actionJobs:
 
     if checker.intCheck(actions) != int():
-        print(actions)
+       # print(actions)
         actionArray.append(int(actions))
  
             
@@ -22,9 +25,27 @@ for actions in actionJobs:
 selected = []
 """ Select jobs """
 for  x in actionArray:
-    print(jobsList[x-1])
+    #print(jobsList[x-1])
     selected.append(jobsList[x-1])
 #print("outside",selected)
 
-checker.indexRun(selected,actionArray)
-checker.sqlRun(selected, actionArray)
+indexSelected = checker.indexRun(selected,actionArray)
+mdfSelected, ldfSelected = checker.sqlRun(selected, actionArray)
+print("Please manaully check to see if the SQL indecies are the correctly selected")
+""" TODO Automatically check file names in with SQL indices """
+
+print("BIN",selected)
+
+print("MDF", mdfSelected)
+
+print("LDF",ldfSelected)
+
+confirm = input("\n \nDo you agree these are the files that should be moved? Y/N ")
+if confirm.upper() != "Y":
+     print("Damnit sorry, the program will now exit")
+     time.sleep(3)
+     raise SystemExit
+     
+     
+#move.archives(selected, indexSelected, mdfSelected, ldfSelected)
+move.archives(selected, indexSelected, mdfSelected, ldfSelected)

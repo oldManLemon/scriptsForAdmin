@@ -1,1 +1,4 @@
 MAILARCH
+__pycache__
+mailArchiver/__pycache__
+*.pyc
