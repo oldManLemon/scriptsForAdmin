@@ -1,18 +1,12 @@
 import os
-
-
-def intCheck(number):
-    try:
-        return int(number)
-    except ValueError:
-        return False
+import checker
 
 
 """ First Get list of Files available for moving and print"""
 """ We are going to use binary to scan for file names """
 jobsList = os.listdir("example/binary")
 # print(jobsList)
-for jobs in enumerate(jobsList, start=1):
+for jobs in enumerate(jobsList, start=1): # 0 cannot be accpted as 0 is not an int
     print(jobs)
 
 """ Then allow selection of available files"""
@@ -21,7 +15,7 @@ actionArray = []
 
 for actions in actionJobs:
     # print(actions)
-    if intCheck(actions) == int():
+    if checker.intCheck(actions) == int():
         print("")
     else: 
             # print(actions)
@@ -32,6 +26,7 @@ print(actionArray)
 """ Select jobs """
 for  x in actionArray:
     print(jobsList[x-1])
+
 
 
 """ Then detach database if posssible """
