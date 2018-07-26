@@ -1,4 +1,4 @@
-#mailArchiver
+# mailArchiver
 This is designed to deal with the files that are outputted from GFI Mail Archiver. The files are in a very particular manner which makes manually copying them and moving them around annoying. 
 
 ## How to use
@@ -10,7 +10,7 @@ This is designed to deal with the files that are outputted from GFI Mail Archive
 - Select `Y` and the script will then execute. 
 
 ### TODO
-Add script to close connection to database first
-Neaten source and destination options
-AutoCompare mdf with binary
-Clean up moved files once done. 
+- Add script to close connection to database first
+- Neaten source and destination options
+- AutoCompare mdf with binary
+- Clean up moved files once done. 
