@@ -1,4 +1,5 @@
 import os
+import settings
 
 def intCheck(number):
     try:
@@ -10,12 +11,10 @@ def indexRun(selectedArray, numberSelectionsArray):
 
     index = os.listdir("example/indexes")
     selectedIndex =[]
-    #print(index)
+
     for x in numberSelectionsArray:
-       # print(index[x-1])
         selectedIndex.append(index[x-1])
- 
-    #print(selectedIndex == selectedArray)
+    
     if (selectedIndex == selectedArray) == False:
         print("Sorry folders missing from index folder or are incorrectly named \n Please perform this manually")
         raise SystemExit
@@ -29,7 +28,7 @@ def sqlRun(selectedArray, numberSelectionsArray):
             mdf = []
             mdfSelected = []
             
-            for x in os.listdir("C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA"):
+            for x in os.listdir(settings.sqlSource):
                 if x.endswith(".ldf"):
                     ldf.append(x)
                 else:
@@ -39,10 +38,5 @@ def sqlRun(selectedArray, numberSelectionsArray):
            
                 ldfSelected.append(ldf[x-1])
                 mdfSelected.append(mdf[x-1])
-        
-           
-            #print("MDFs ",mdfSelected)
-            #print("LDFs ",ldfSelected)
             return mdfSelected, ldfSelected
-            #print("SQL Array",selectedSql)
 

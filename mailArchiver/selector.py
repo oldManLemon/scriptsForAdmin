@@ -3,9 +3,10 @@ import checker
 import time
 import move
 import detach
+import settings
 
 
-jobsList = os.listdir("example/binary")
+jobsList = os.listdir(settings.binSource)
 
 for jobs in enumerate(jobsList, start=1):  # 0 cannot be accpted as 0 is not an int
     print(jobs)
@@ -17,17 +18,15 @@ actionArray = []
 for actions in actionJobs:
 
     if checker.intCheck(actions) != int():
-       # print(actions)
         actionArray.append(int(actions))
 
 
-# print(actionArray)
 selected = []
 """ Select jobs """
 for x in actionArray:
-    # print(jobsList[x-1])
+
     selected.append(jobsList[x-1])
-# print("outside",selected)
+
 
 indexSelected = checker.indexRun(selected, actionArray)
 mdfSelected, ldfSelected = checker.sqlRun(selected, actionArray)
@@ -54,5 +53,4 @@ print("Waiting for databases to detach :) .....")
 time.sleep(1)
 print("...")
 time.sleep(3)
-#move.archives(selected, indexSelected, mdfSelected, ldfSelected)
 move.archives(selected, indexSelected, mdfSelected, ldfSelected)

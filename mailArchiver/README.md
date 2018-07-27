@@ -10,7 +10,7 @@ This is designed to deal with the files that are outputted from GFI Mail Archive
 - Select `Y` and the script will then execute. 
 
 ### TODO
-- Add script to close connection to database first
+- Turn into exe, potentially need txt or json to read to read the settings window
 - Neaten source and destination options
 - AutoCompare mdf with binary
 - Clean up moved files once done. 
