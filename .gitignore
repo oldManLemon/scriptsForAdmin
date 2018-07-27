@@ -2,3 +2,10 @@ MAILARCH
 __pycache__
 mailArchiver/__pycache__
 *.pyc
+/mailArchiver/pyodbc
+/mailArchiver/example
+mailArchiver/example/sqlexpress/file 1.mdf
+mailArchiver/example/sqlexpress/file 2_log.ldf
+mailArchiver/example/sqlexpress/file 1.mdf
+mailArchiver/example/sqlexpress/file 1_log.ldf
+mailArchiver/example/sqlexpress/file 2.mdf
