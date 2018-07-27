@@ -50,6 +50,9 @@ if confirm.upper() != "Y":
 # Here use our selector to select our databases and clear them out
 for x in range(len(selected)):
     detach.detach(selected[x])
-
+print("Waiting for databases to detach :) .....")
+time.sleep(1)
+print("...")
+time.sleep(3)
 #move.archives(selected, indexSelected, mdfSelected, ldfSelected)
 move.archives(selected, indexSelected, mdfSelected, ldfSelected)

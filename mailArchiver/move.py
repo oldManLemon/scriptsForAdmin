@@ -19,7 +19,7 @@ def archives(binary, index, mdf, ldf):
 
     binSource = "example/binary/"
     indexSource = "example/indexes/"
-    sqlSource = "example/sqlexpress/"
+    sqlSource = "C:/Program Files/Microsoft SQL Server/MSSQL14.SQLEXPRESS/MSSQL/DATA/"
 
     #Destinations
     binDest = "//hawkeye/Cloud/Other/pythonPrac/binary/"

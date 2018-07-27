@@ -29,7 +29,7 @@ def sqlRun(selectedArray, numberSelectionsArray):
             mdf = []
             mdfSelected = []
             
-            for x in os.listdir("example/sqlexpress"):
+            for x in os.listdir("C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA"):
                 if x.endswith(".ldf"):
                     ldf.append(x)
                 else:

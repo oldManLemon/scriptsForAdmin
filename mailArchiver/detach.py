@@ -29,6 +29,13 @@ sqlDETACHend = '", "true";'
 print("I keep running??")
 
 def detach(database):
-    print(sqlNoResultsExpected)
-    print(sqlDETACH+database+sqlDETACHend)
-
+    
+    print("Detaching ", database+".dbo")
+    try:
+        cursor2.execute(sqlNoResultsExpected)
+        cursor.execute(sqlDETACH+database+sqlDETACHend)
+        #print(sqlDETACH+database+sqlDETACHend)
+        #print ("Great sucess?")
+    except TypeError as err:
+        print(err)
+    print(database, "succesfully detached")
