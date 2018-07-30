@@ -1,5 +1,5 @@
 # mailArchiver
-This is designed to deal with the files that are outputted from GFI Mail Archiver. The files are in a very particular manner which makes manually copying them and moving them around annoying. 
+This is designed to deal with the files that are outputted from GFI Mail Archiver. The files are in a very particular manner which makes manually copying them and moving them around annoying.  Needs to be run as admin
 
 ## How to use
 - Firstly you'll need python installed. 

@@ -1,5 +1,6 @@
 import os
 import settings
+import log
 
 def intCheck(number):
     try:
@@ -38,5 +39,10 @@ def sqlRun(selectedArray, numberSelectionsArray):
            
                 ldfSelected.append(ldf[x-1])
                 mdfSelected.append(mdf[x-1])
+
+            log.logger("###Databases being targeted for detachment and removal###")
+            log.logger(mdfSelected)
+            log.logger(ldfSelected)
+
             return mdfSelected, ldfSelected
 

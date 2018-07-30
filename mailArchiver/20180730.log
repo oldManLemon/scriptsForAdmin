@@ -1,0 +1,47 @@
+
+###Databases being targeted for detachment and removal###
+['file 1.mdf']
+['file 1_log.ldf']
+###Actions: Files selected to be copied and removed###
+Binary:['file 1']
+Indexes:['file 1']
+MDF:['file 1.mdf']
+LDF['file 1_log.ldf']
+('file 1', 'Already appears to be detached see err \n', ProgrammingError('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]User 'public' does not have permission to run DBCC detachdb for database 'file 1'. (7983) (SQLExecDirectW)"))
+###Databases being targeted for detachment and removal###
+['file 1.mdf']
+['file 1_log.ldf']
+###Actions: Files selected to be copied and removed###
+Binary:['file 1']
+Indexes:['file 1']
+MDF:['file 1.mdf']
+LDF['file 1_log.ldf']
+('file 1', 'Already appears to be detached see err \n', ProgrammingError('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot detach the database 'file 1' because it is currently in use. (3703) (SQLExecDirectW)"))
+###Databases being targeted for detachment and removal###
+['file 1.mdf']
+['file 1_log.ldf']
+###Actions: Files selected to be copied and removed###
+Binary:['file 1']
+Indexes:['file 1']
+MDF:['file 1.mdf']
+LDF['file 1_log.ldf']
+('file 1', 'successfully detached')
+example/binary/file 1 =>//hawkeye/Cloud/Other/pythonPrac/binary/file 1
+example/indexes/file 1 =>//hawkeye/Cloud/Other/pythonPrac/indexes/file 1
+###Databases being targeted for detachment and removal###
+['file 2.mdf']
+['file 2_log.ldf']
+###Actions: Files selected to be copied and removed###
+Binary:['file 2']
+Indexes:['file 2']
+MDF:['file 2.mdf']
+LDF['file 2_log.ldf']
+('file 2', 'successfully detached')
+example/binary/file 2 =>//hawkeye/Cloud/Other/pythonPrac/binary/file 2
+example/indexes/file 2 =>//hawkeye/Cloud/Other/pythonPrac/indexes/file 2
+example/sqlexpress/file 2.mdf =>//hawkeye/Cloud/Other/pythonPrac/sqlexpress/file 2.mdf
+example/sqlexpress/file 2_log.ldf =>//hawkeye/Cloud/Other/pythonPrac/sqlexpress/file 2_log.ldf
+example/binary/file 2 Deleted
+example/indexes/file 2 Deleted
+example/sqlexpress/file 2.mdf Deleted
+example/sqlexpress/file 2_log.ldf Deleted

@@ -4,6 +4,12 @@ import time
 import move
 import detach
 import settings
+import datetime
+import log
+
+#Logging
+
+
 
 
 jobsList = os.listdir(settings.binSource)
@@ -45,12 +51,16 @@ if confirm.upper() != "Y":
     print("Damnit sorry, the program will now exit")
     time.sleep(3)
     raise SystemExit
-
+collectionDetails ="Binary:" + str(selected) + "\nIndexes:" + str(indexSelected) + "\nMDF:" + str(mdfSelected) + "\nLDF" + str(ldfSelected)
+log.logger("###Actions: Files selected to be copied and removed###")
+log.logger(collectionDetails)
 # Here use our selector to select our databases and clear them out
 for x in range(len(selected)):
     detach.detach(selected[x])
-print("Waiting for databases to detach :) .....")
+print("Waiting for databases to be moveable :) .....")
 time.sleep(1)
 print("...")
 time.sleep(3)
 move.archives(selected, indexSelected, mdfSelected, ldfSelected)
+print("Files have being successfully archived! ")
+
