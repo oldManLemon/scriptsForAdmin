@@ -1,3 +1,8 @@
+# Welcome to the example REPO!!!
+This is the example repo. It is not entirly useless I promise. This is holds a few bat scripts I have written and the mailArchiver py script which can be converted into an exe. 
+
+
+
 # mailArchiver
 This is designed to deal with the files that are outputted from GFI Mail Archiver. The files are in a very particular manner which makes manually copying them and moving them around annoying.  Needs to be run as admin
 
