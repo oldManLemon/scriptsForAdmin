@@ -9,3 +9,7 @@ mailArchiver/example/sqlexpress/file 2_log.ldf
 mailArchiver/example/sqlexpress/file 1.mdf
 mailArchiver/example/sqlexpress/file 1_log.ldf
 mailArchiver/example/sqlexpress/file 2.mdf
+mailArchiver/build
+mailArchiver/dist
+mailArchiver/mail.spec
+mailArchiver/settings.py

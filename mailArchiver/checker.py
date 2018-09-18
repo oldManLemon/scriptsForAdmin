@@ -10,7 +10,7 @@ def intCheck(number):
 
 def indexRun(selectedArray, numberSelectionsArray):
 
-    index = os.listdir("example/indexes")
+    index = os.listdir(settings.indexSource)
     selectedIndex =[]
 
     for x in numberSelectionsArray:
