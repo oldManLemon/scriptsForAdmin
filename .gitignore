@@ -12,4 +12,4 @@ mailArchiver/example/sqlexpress/file 2.mdf
 mailArchiver/build
 mailArchiver/dist
 mailArchiver/mail.spec
-mailArchiver/settings.py
+mailArchiver/set.py
